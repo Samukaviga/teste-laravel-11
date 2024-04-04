@@ -1,0 +1,66 @@
+
+.titulo {
+    font-size: 25px;
+    color: aliceblue;
+}
+
+.conteudo {
+    font-size: 25px;
+    color: aliceblue;
+}
+
+.series {
+    margin-bottom: 0.5em;
+}
+
+.series__flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    border-radius: 5px;
+}
+
+.btn-editar {
+    background-color: rgb(4, 54, 37);
+    padding: 0.3em;
+}
+
+.btn-excluir {
+    background-color: rgb(74, 26, 5);
+    padding: 0.3em;
+}
+
+.btn-form {
+    padding: 0px;
+    width: 80px;
+    border-radius: 5px;
+}
+
+.container__series {
+    display: flex;
+    gap: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.input-form {
+    color: rgb(0, 0, 0);
+}
+
+.alerta-arro{
+    background-color: rgb(187, 64, 64);
+    text-align: center;
+    border-radius: 5px;
+}
+
+.alerta-sucesso {
+    background-color: rgb(73, 142, 85);
+    text-align: center;
+    border-radius: 5px;
+}
