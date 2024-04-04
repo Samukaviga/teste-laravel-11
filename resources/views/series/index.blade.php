@@ -22,7 +22,7 @@
                     </div>
                     
                     <div class="container__series">
-                        <a href="#" class="btn btn-editar">Editar</a>
+                        <a href="/series/{{ $serie->id }}/editar" class="btn btn-editar">Editar</a>
 
                         <form action="/series/{{$serie->id}}" method="post">
                             @csrf
