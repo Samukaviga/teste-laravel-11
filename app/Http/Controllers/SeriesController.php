@@ -40,14 +40,20 @@ class SeriesController extends Controller
         //
     }
 
-    public function edit(string $id)
-    {
-        //
+    public function edit(Request $request)
+    {   
+        $serie = Series::find($request->id);
+
+        return view ('series.edit')->with('serie', $serie); 
     }
 
-    public function update(Request $request, string $id)
+    public function update(FormSeriesRequest $request, string $id)
     {
-        //
+        $serie = Series::find($request->id);
+        $serie->nome = $request->nome;
+        $serie->save();
+
+        return redirect('/series')->with('mensagem.sucesso', "Serie '$serie->nome' Atualizada com sucesso!");
     }
 
     public function destroy(Request $request)

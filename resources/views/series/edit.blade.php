@@ -7,10 +7,11 @@
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100 series__flex">
 
-                   <form action="/series" method="post"> 
+                   <form action="/series/{{ $serie->id }}" method="post"> 
                         @csrf
+                        @method('put')
                         <label for="">Nome</label>
-                        <input class="input-form" type="text" name="nome" >
+                        <input class="input-form" type="text" name="nome" value="{{ $serie->nome }}">
 
                         <input class="btn-editar btn-form" type="submit" value="Criar">
 

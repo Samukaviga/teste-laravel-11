@@ -45,6 +45,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/series/criar', [SeriesController::class, 'create'])->name('criar');
     Route::post('/series', [SeriesController::class, 'store']);
     Route::get('/series/{id}/editar', [SeriesController::class, 'edit']);
+    Route::put('/series/{id}', [SeriesController::class, 'update']);
     Route::delete('/series/{id}', [SeriesController::class, 'destroy']);
 
     Route::get('verify-email', EmailVerificationPromptController::class)
