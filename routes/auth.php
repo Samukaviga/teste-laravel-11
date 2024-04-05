@@ -9,6 +9,7 @@ use App\Http\Controllers\Auth\PasswordController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
+use App\Http\Controllers\EpisodiosController;
 use App\Http\Controllers\SeriesController;
 use App\Http\Controllers\TemporadasController;
 use App\Http\Controllers\UsuariosController;
@@ -50,6 +51,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/series/{id}', [SeriesController::class, 'destroy']);
 
     Route::get('/temporadas/{id}', [TemporadasController::class, 'index']);
+
+    Route::get('/episodios/{id}', [EpisodiosController::class, 'index']);
+    Route::get('/episodios/{id}', [EpisodiosController::class, 'update']);
 
     Route::get('verify-email', EmailVerificationPromptController::class)
                 ->name('verification.notice');

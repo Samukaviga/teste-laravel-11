@@ -64,3 +64,8 @@ form {
     text-align: center;
     border-radius: 5px;
 }
+
+.botao_flex {
+    display: flex;
+    justify-content: center;
+}
