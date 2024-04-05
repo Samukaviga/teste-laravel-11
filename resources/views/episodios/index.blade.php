@@ -28,7 +28,7 @@
                     
                     <div class="container__series">
                             
-                        <input type="checkbox" name="episodios[]" value="{{ $episodio->id }}">
+                        <input type="checkbox" name="episodios[]" value="{{ $episodio->id }}" {{ $episodio->assistido ? "checked" : '' }}>
                           
                     </div>
 

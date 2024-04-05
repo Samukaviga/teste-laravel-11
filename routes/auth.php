@@ -53,7 +53,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/temporadas/{id}', [TemporadasController::class, 'index']);
 
     Route::get('/episodios/{id}', [EpisodiosController::class, 'index']);
-    Route::get('/episodios/{id}', [EpisodiosController::class, 'update']);
+    Route::put('/episodios/{id}', [EpisodiosController::class, 'update']);
 
     Route::get('verify-email', EmailVerificationPromptController::class)
                 ->name('verification.notice');
