@@ -12,6 +12,12 @@
                         <label for="">Nome</label>
                         <input class="input-form" type="text" name="nome">
 
+                        <label for="">Temporada n/</label>
+                        <input class="input-form" type="text" name="qtdTemporada">
+
+                        <label for="">Episodios n/</label>
+                        <input class="input-form" type="text" name="qtdEpisodios">
+
                         <input class="btn-editar btn-form" type="submit" value="Criar">
 
                    </form>

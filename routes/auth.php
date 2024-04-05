@@ -10,6 +10,7 @@ use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Http\Controllers\SeriesController;
+use App\Http\Controllers\TemporadasController;
 use App\Http\Controllers\UsuariosController;
 use Illuminate\Support\Facades\Route;
 
@@ -47,6 +48,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/series/{id}/editar', [SeriesController::class, 'edit']);
     Route::put('/series/{id}', [SeriesController::class, 'update']);
     Route::delete('/series/{id}', [SeriesController::class, 'destroy']);
+
+    Route::get('/temporadas/{id}', [TemporadasController::class, 'index']);
 
     Route::get('verify-email', EmailVerificationPromptController::class)
                 ->name('verification.notice');
