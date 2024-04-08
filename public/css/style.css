@@ -69,3 +69,9 @@ form {
     display: flex;
     justify-content: center;
 }
+
+.assistidos__container{
+    background-color: rgb(26, 51, 84);
+    padding: 0.3em;
+    border-radius: 5px;
+}

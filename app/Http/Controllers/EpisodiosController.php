@@ -11,8 +11,11 @@ class EpisodiosController extends Controller
     public function index(Request $request) { 
        
         $temporada = Temporadas::find($request->id);
-       
-        return view('episodios.index')->with('temporada', $temporada);
+        $mensagemSucesso = session('mensagem.sucesso');
+        session()->forget('mensagem.sucesso');
+
+        return view('episodios.index')->with('temporada', $temporada)
+                                        ->with('mensagemSucesso', $mensagemSucesso);
     }
 
     public function update(Request $request){
@@ -28,6 +31,6 @@ class EpisodiosController extends Controller
         
         });
 
-        return redirect('/episodios/'. $temporada->id);
+        return redirect('/episodios/'. $temporada->id)->with('mensagem.sucesso', "Episodio atualizado com sucesso!");
     }
 }

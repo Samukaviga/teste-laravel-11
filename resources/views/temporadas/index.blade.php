@@ -21,10 +21,10 @@
                             Temporada {{ $temporada->numero }}
                         </div>
                         
-                        <div class="container__series">
+                        <div class="container__series assistidos__container">
                         
-                            <a href="/episodios/{{ $temporada->id }}">
-                                ep. {{ $temporada->episodios->count() }}
+                            <a href="/episodios/{{ $temporada->id }}">  
+                                {{ $temporada->episodiosAssistidos() }}/{{ $temporada->episodios->count() }}
                             </a>
                         
                         </div>

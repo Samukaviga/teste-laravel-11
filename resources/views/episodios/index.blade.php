@@ -1,6 +1,5 @@
 <x-app-layout>
 
-    
                 @isset($mensagemSucesso)
                     <div class="max-w-7xl mt-3 mx-auto sm:px-6 lg:px-8">    
                         <div class="alerta-sucesso">
@@ -10,7 +9,6 @@
                         </div>
                     </div>
                 @endisset
-
         
     <form action="/episodios/{{ $temporada->id }}" method="post">
     @csrf
